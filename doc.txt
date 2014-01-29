@@ -1,0 +1,70 @@
+[ARGUMENT]
+
+uid : user's id
+mid : music's id
+
+[/ARGUMENT]
+
+[VOTE] method POST&GET
+
+ADRESS : qsc_music/index.php/music/vote?mid=1&sign=1
+
+sign  while 1 for vote , 0 for cancel vote
+
+RETURN JSON
+
+{ifSuccess} for the success of voting or not
+1: successfully voted
+-1: the user have already voted (prevent the forcibly vote)
+-2: there is no such a {mid} in database
+-3: the user is not logined
+-4: wrong sign
+{/ifSuccess}
+
+[/VOTE]
+
+[GET_MUSIC_INFO] method POST&GET
+
+ADRESS : qsc_music/index.php/music/get_music_info?mid=1
+
+RETURN JSON
+{clientName} the file name of the music saved in the client
+{uploadDate} uploadDate
+{votes} the number of votes the music gained
+{userName} uploader's name
+{ifSucces} 1 refers to success, 0 to unsuccess
+{isVoted} 1 for the ip have already voted the music ,0 for not
+
+[/GET_MUSIC_INFO]
+
+[REJESTER] method POST
+
+ADDRESS : qsc_music/index.php/user/rejester
+
+RETURN JSON
+{ifSuccess}
+1 : successfully rejestered
+-1 : the user have already rejestered(you can back to login page)
+-2 : the user have already login(you can back to main page)
+-3 : the validation of captcha didn't pass
+{/ifSuccess}
+
+[/REJESTER]
+
+[CAPTCHA]
+
+ADRESS : qsc_music/index.php/user/captcha
+
+I will return a image tage like "<img src="http://example.com/captcha/12345.jpg" width="140" height="50" />" you can use it directly
+
+[/CAPTCHA]
+
+[GET_USER_DATA]
+
+ADDRESS : qsc_music/index.php/user/get_user_data
+
+RETURN JSON
+{ifLogin} 1 for logined,0 for not yet
+{userName} if logined , it will return the user's name
+
+[/GET_USER_DATA]
