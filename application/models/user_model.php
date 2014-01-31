@@ -24,6 +24,7 @@ class User_model extends CI_Model
 
   public function login_check($emailAddress,$password)
   {
+    $emailAddress = strtoupper($emailAddress);
     $this->db->select('userName,mid')->from('user');
     $this->db->where('emailAddress',$emailAddress);
     $query = $this->db->get();
@@ -51,7 +52,7 @@ class User_model extends CI_Model
       'tel1' => $this->input->post('tel1'),
       'tel2' => $this->input->post('tel2'),
       'schoolId' => $this->input->post('schoolId'),
-      'emailAddress' => $this->input->post('emailAddress'),
+      'emailAddress' => strtoupper($this->input->post('emailAddress')),
       'qq' => $this->input->post('qq'),
       'wechat' => $this->input->post('ifPerformance'),
       'ifOpen' => $this->input->post('ifOpen')
