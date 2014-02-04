@@ -169,6 +169,7 @@ class User extends CI_Controller
     {
       $data['ifSuccess'] = -3;
       $data['error'] = '验证码错误请重新输入';
+      if ($this->session->userdata('captcha') != NULL) $this->session->unset_userdata('captcha');
       echo json_encode($data);
       return ;
     }
