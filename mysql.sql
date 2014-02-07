@@ -35,13 +35,6 @@ CREATE TABLE IF NOT EXISTS `music` (
   `votes` int(11) DEFAULT '0',
   `userName` varchar(30) NOT NULL,
   `nickName` varchar(30) NOT NULL,
-  `selfIntro` varchar(200) NOT NULL,
-  `tel1` varchar(20) NOT NULL,
-  `tel2` varchar(20) NOT NULL,
-  `schoolId` int(2) NOT NULL,
-  `emailAddress` varchar(30) NOT NULL,
-  `qq` int(20) NOT NULL,
-  `wechat` varchar(20) NOT NULL,
   `styleId` int(2) NOT NULL,
   `musicName` varchar(30) NOT NULL,
   `ifPerformance` int(1) NOT NULL,
@@ -92,6 +85,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `uploadTimes` int(11) DEFAULT '0',
   `nickName` varchar(30) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `salt` varchar(23) NOT NULL,
   `selfIntro` varchar(200) NOT NULL,
   `tel1` int(30) NOT NULL,
   `tel2` int(30) NOT NULL,
@@ -114,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `votelist` (
   `uid` int(11) NOT NULL,
   `mid` int(11) NOT NULL,
   PRIMARY KEY (`uid`,`mid`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 

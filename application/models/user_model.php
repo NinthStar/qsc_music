@@ -30,9 +30,11 @@ class User_model extends CI_Model
     $query = $this->db->get();
     $data = $query->row_array();
     $pwd = $data['password'];
+    $salt = $data['salt'];
     unset($data['password']);
+    unset($data['salt']);
     $password = urlencode($password);
-    if ($pwd != crypt($password,$pwd))
+    if ($pwd != crypt($password,$salt))
     {
       $data['ifSuccess'] = 0;
       return $data;
@@ -44,9 +46,10 @@ class User_model extends CI_Model
   public function register()
   {
     $this->load->helper('security');
+    $salt = uniqid('',TRUE);
     $postData = array(
       'userName' => $this->input->post('userName'),
-      'password' => crypt(urlencode($this->input->post('password'))),
+      'password' => crypt(urlencode($this->input->post('password')),$salt),
       'nickName' => $this->input->post('nickName'),
       'selfIntro' => $this->input->post('selfIntro'),
       'tel1' => $this->input->post('tel1'),
@@ -55,7 +58,8 @@ class User_model extends CI_Model
       'emailAddress' => strtoupper($this->input->post('emailAddress')),
       'qq' => $this->input->post('qq'),
       'wechat' => $this->input->post('ifPerformance'),
-      'ifOpen' => $this->input->post('ifOpen')
+      'ifOpen' => $this->input->post('ifOpen'),
+      'salt' => $salt
     );
 
     $this->db->insert('user',$postData);
