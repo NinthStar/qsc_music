@@ -1,0 +1,16 @@
+#music-player {
+	height : 100px;
+	width  : 400px;
+}
+#audio-url {
+	display : none;
+}
+#progress-outer {
+	padding          : 3px;
+	background-color : #DDD;
+}
+#progress-inner {
+	width            : 0;
+	height           : 6px;
+	background-color : #FFF;
+}

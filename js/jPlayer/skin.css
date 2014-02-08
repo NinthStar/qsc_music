@@ -1,0 +1,121 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.happyworm.com/jquery/jplayer
+ *
+ * Skin Name: Blue Monday
+ *
+ * Copyright (c) 2010 Happyworm Ltd
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Author: Silvia Benvenuti
+ * Skin Version: 2.1
+ * Date: 13th May 2010
+ */
+li {
+	list-style : none;
+}
+
+.jp-interface .jp-controls li {
+	position : absolute;
+}
+.jp-interface .jp-controls a {
+	position    : absolute;
+	overflow    : hidden;
+	text-indent : -9999px;
+}
+.jp-play, .jp-pause {
+	width  : 40px;
+	height : 40px;
+}
+.jp-play {
+	background : url("skin.jpg") 0 0 no-repeat;
+}
+.jp-play:hover {
+	background : url("skin.jpg") -41px 0 no-repeat;
+}
+.jp-pause {
+	background : url("skin.jpg") 0 -42px no-repeat;
+	display    : none;
+}
+.jp-pause:hover {
+	background : url("skin.jpg") -41px -42px no-repeat;
+}
+.jp-stop {
+	top        : 6px;
+	left       : 50px;
+	background : url("skin.jpg") 0 -83px no-repeat;
+	width      : 28px;
+	height     : 28px;
+}
+.jp-stop:hover {
+	background : url("skin.jpg") -29px -83px no-repeat;
+}
+.jp-progress {
+	position         : absolute;
+	overflow         : hidden;
+	top              : 26px;
+	left             : 126px;
+	background-color : #ddd;
+	width            : 122px;
+	height           : 15px;
+}
+.jp-load-bar {
+	background : url("skin.jpg") 0 -202px repeat-x;
+	width      : 0;
+	height     : 15px;
+	cursor     : pointer;
+}
+.jp-play-bar {
+	background : url("skin.jpg") 0 -218px repeat-x ;
+	width      : 0;
+	height     : 15px;
+}
+.jp-volume-min {
+	top        : 12px;
+	left       : 234px;
+	background : url("skin.jpg") 0 -170px no-repeat;
+	width      : 18px;
+	height     : 15px;
+}
+.jp-volume-min:hover {
+	background : url("skin.jpg") -19px -170px no-repeat;
+}
+.jp-volume-max {
+	top        : 12px;
+	left       : 286px;
+	background : url("skin.jpg") 0 -186px no-repeat;
+	width      : 18px;
+	height     : 15px;
+}
+.jp-volume-max:hover {
+	background : url("skin.jpg") -19px -186px no-repeat;
+}
+
+.jp-volume-bar {
+	position   : absolute;
+	overflow   : hidden;
+	top        : 31px;
+	left       : 262px;
+	background : url("skin.jpg") 0 -250px repeat-x;
+	width      : 46px;
+	height     : 5px;
+	cursor     : pointer;
+}
+.jp-volume-bar-value {
+	background : url("skin.jpg") 0 -256px repeat-x;
+	width      : 0;
+	height     : 5px;
+}
+.jp-current-time, .jp-duration {
+	position   : absolute;
+	top        : 44px;
+	left       : 125px;
+	width      : 122px;
+	font-size  :.64em;
+	font-style : oblique;
+}
+.jp-duration {
+	text-align : right;
+}

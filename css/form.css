@@ -1,0 +1,76 @@
+#form-background {
+	width            : 660px;
+	padding          : 16px;
+	background-color : #EEE;
+}
+form {
+	width : 660px;
+}
+.form-element {
+	min-height : 48px;
+	display    : inline-block;
+}
+red {
+	color : red;
+}
+h2, h3, p, label, input, div.select, textarea {
+	margin  : 8px;
+	padding : 4px;
+}
+label {
+	height      : 22px;
+	width       : 120px;
+	float       : left;
+	font-weight : bold;
+}
+input[type="text"], input[type="password"], input[type="file"] {
+	width  : 140px;
+}
+input[type="text"], input[type="password"], input[type="file"], input[type="radio"] {
+	height : 22px;
+}
+div.select {
+	width    : 158px;
+	height   : 28px;
+	position : absolute;
+	display  : inline-block;
+}
+div.option {
+	width : 72px;
+}
+textarea {
+	width      : 454px;
+	overflow-x : hidden;
+	resize     : none;
+}
+textarea[name="description"] {
+	height : 180px;
+}
+textarea[name="selfIntro"] {
+	height : 60px;
+}
+hr {
+	height     : 1px;
+	border     : 0;
+	border-top : 1px dashed #999;
+}
+#captcha-img {
+	margin  : 8px 12px;
+	display : inline-block;
+}
+#refresh-captcha {
+	height          : 28px;
+	margin          : 8px;
+	display         : inline-block;
+	color           : blue;
+	line-height     : 28px;
+	text-decoration : underline;
+	cursor          : pointer;
+}
+#error-info {
+	height  : 28px;
+	margin  : 8px;
+	padding : 4px;
+	display : inline-block;
+	float   : left;
+}

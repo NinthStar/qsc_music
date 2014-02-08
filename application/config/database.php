@@ -49,8 +49,8 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'qsc_music';
-$db['default']['password'] = '2mJzfHDNq3X6MRCt';
+$db['default']['username'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'qsc_music';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

@@ -91,7 +91,7 @@ class Music extends CI_Controller
 
     $this->form_validation->set_rules($config);
 
-    $this->form_validation->set_message('required','请填写%s');
+    $this->form_validation->set_message('required','请填写%d');
     $this->form_validation->set_message('valid_email','您所填写的邮箱格式有误');
     $this->form_validation->set_message('max_length','您所填写的%s超出长度要求');
     $this->form_validation->set_message('alpha_dash','你所填写的%s含有非法字符，请检查');

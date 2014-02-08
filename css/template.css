@@ -1,0 +1,35 @@
+.style-clear {
+	clear : both;
+}
+.style-left {
+	float : left;
+}
+.style-center {
+	margin-left  : auto;
+	margin-right : auto;
+}
+.style-right {
+	float : right;
+}
+body {
+	margin           : 0;
+	background-color : #FFF;
+	font-size        : 14px;
+	font-family      : "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#header {
+	height : 48px;
+}
+#header-navi, #user-cmd {
+	height      : 40px;
+	margin      : 4px;
+	font-size   : 28px;
+	line-height : 40px;
+	text-align  : center;
+}
+.user-cmd-element {
+	display : inline-block;
+}
+#left-navi, #container {
+	display : inline-block;
+}
