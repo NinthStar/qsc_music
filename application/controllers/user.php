@@ -62,7 +62,7 @@ class User extends CI_Controller
       echo json_encode($jsonData);
       return ;
     }
-    $jsonDat['ifSuccess'] = 0;
+    $jsonData['ifSuccess'] = 0;
     echo json_encode($jsonData);
     return ;
   }

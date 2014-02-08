@@ -44,6 +44,7 @@ ADDRESS : qsc_music/index.php/user/rejester
 RETURN JSON
 {ifSuccess}
 1 : successfully rejestered
+0 : form validation error
 -1 : the user have already rejestered(you can back to login page)
 -2 : the user have already login(you can back to main page)
 -3 : the validation of captcha didn't pass
@@ -53,7 +54,7 @@ RETURN JSON
 
 [CAPTCHA]
 
-ADRESS : qsc_music/index.php/user/captcha
+ADRESS : qsc_music/index.php/user/get_captcha
 
 I will return a image tage like "<img src="http://example.com/captcha/12345.jpg" width="140" height="50" />" you can use it directly
 
@@ -68,3 +69,7 @@ RETURN JSON
 {userName} if logined , it will return the user's name
 
 [/GET_USER_DATA]
+
+[SELECT_MUSIC_FROM]
+
+ADDRESS : qsc_music/index.php/music/select_music_from
