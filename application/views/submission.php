@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/form.css"></link>
+<link rel="stylesheet" href="/css/form.css"></link>
 <div id="form-background">
 	<form class="style-center" name="submission" method="POST">
 		<h2>提交我的音乐</h2>
@@ -69,4 +69,4 @@
 		<div class="style-clear"></div>
 	</form>
 </div>
-<script type="text/javascript" src="js/form.js"></script>
+<script type="text/javascript" src="/js/form.js"></script>

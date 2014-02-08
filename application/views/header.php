@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="UTF-8" />
 		<title> Music </title>
-		<link rel="stylesheet" href="css/template.css"></link>
-		<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+		<link rel="stylesheet" href="/qsc_music/css/template.css"></link>
+		<script type="text/javascript" src="/qsc_music/js/jquery-1.11.0.min.js"></script>
 	</head>
 	<body>
 		<div id="header">

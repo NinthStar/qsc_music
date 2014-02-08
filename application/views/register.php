@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="css/form.css"></link>
+<link rel="stylesheet" href="/qsc_music/css/form.css"></link>
 <div id="form-background">
 	<form class="style-center" name="register" method="POST">
 		<h2>注册</h2>
