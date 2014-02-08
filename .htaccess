@@ -1,9 +1,4 @@
-#default page
 DirectoryIndex index.php
-
-#remove index.php on url
-#by mot
-#For apache rewrite module
 
 <IfModule mod_rewrite.c>
 RewriteEngine on
