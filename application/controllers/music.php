@@ -96,6 +96,7 @@ class Music extends CI_Controller
     $this->form_validation->set_message('max_length','您所填写的%s超出长度要求');
     $this->form_validation->set_message('alpha_dash','你所填写的%s含有非法字符，请检查');
     $this->form_validation->set_message('alpha_numeric','您所填写的%s含有非法字符，请检查');
+    $this->form_validation->set_error_delimiters('', '');
 
     if($this->form_validation->run() == FALSE)
     {
@@ -118,14 +119,14 @@ class Music extends CI_Controller
     }
     $mid = $this->input->get_post('mid');
 
-    if (($musicInfo = $this->music_model->get_music($mid)) === FALSE)
+    if (($musicInfo = $this->music_model->get_music($mid)) == FALSE)
     {
       $data['ifSuccess'] = 0;
       echo json_encode($data);
       return;
     }
     $musicInfo['ifSuccess'] = 1;
-    if (($this->session->userdata('uid') != NULL) && $this->user_model->is_voted($this->session->userdata('uid'),$mid))
+    if (($this->session->userdata('uid') != NULL) && $this->music_model->if_voted($this->session->userdata('uid'),$mid))
     {
       $musicInfo['isVoted'] = 1;
     }

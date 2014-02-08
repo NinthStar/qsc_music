@@ -155,6 +155,7 @@ class User extends CI_Controller
     $this->form_validation->set_message('max_length','您所填写的%s超出长度要求');
     $this->form_validation->set_message('alpha_dash','你所填写的%s含有非法字符，请检查');
     $this->form_validation->set_message('alpha_numeric','您所填写的%s含有非法字符，请检查');
+    $this->form_validation->set_error_delimiters('', '');
 
     if($this->form_validation->run() == FALSE)
     {
