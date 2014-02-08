@@ -1,0 +1,13 @@
+#default page
+DirectoryIndex index.php
+
+#remove index.php on url
+#by mot
+#For apache rewrite module
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}     !-d
+RewriteRule ^(.*)$ index.php?/$1 [L,QSA]
+ </IfModule>
