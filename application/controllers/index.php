@@ -2,21 +2,16 @@
 
 class Index extends CI_Controller
 {
-    private $headData;
-
     public function __construct()
     {
-        parent :: __construct();
-
-        $this->load->model();
-        $this->load->library("session");
-
-        if (@(isset($this->session->userdata['loginName'])))
-            $headData['loginName'] = $this->session->userdata['loginName'];
+      parent :: __construct();
     }
-
-    public function login($uid,$username,$token)
+    public function index()
     {
+      $this->load->view('header.php');
+      $this->load->view('main.php');
+      $this->load->view('footer.php');
     }
+
 }
 
